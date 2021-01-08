@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!-- CSS Sheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/1e07fc90b9.js" crossorigin="anonymous"></script>
+    
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <title>Volkslieder</title>
+  </head>
+
+  <body>
+    <header class="sticky-top">
+        <div class="row heading">
+            <div class="col-6 col-head">
+                <p class="header-name">Volkslieder</p>
+            </div>
+            <div class="col-6 lang col-head">
+                
+                <div class="lang-menu">
+                    <div class="selected-lang english">
+                        English
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#" class="en">English</a>
+                        </li>
+                        <li>
+                            <a href="#" class="fr">Français</a>
+                        </li>
+                        <li>
+                            <a href="#" class="de">Deutsch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="https://www.countryflags.io/gb/flat/32.png"> English
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item" href="#"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
+                      <a class="dropdown-item" href="#"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
+                    </div>
+                  </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="content-wrapper">
+
+            <div class="icon-bar">
+                <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
+                <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
+            </div>
+            
+            <div class="main">
+
+                <h3 class="subtitle-title">Volkslieder:</h3>
+                <h3 class="subtitle-heading">Historical German Music</h3>
+                
+                <div class="photo">
+                    <img class="landscape" src="img/Caspar_David_Friedrich_Cropped.jpg" alt="A Painting of a German Landscape">
+                    <p>The Stages of Life, Caspar David Friedrich, 1835</p>
+                </div>
+
+                <hr>
+
+                <div class="intro">
+                    <p class="disclaimer">
+                        Contained here is a collection of historical German songs and poems, from time 
+                        periods ranging from the Middle Ages to just after the Great War. These may have 
+                        been sung at a variety of instances, such as during workdays, while relaxing at home, during marches, 
+                        or at any number of special occasions. This website is not to be interpreted as political in any 
+                        manner. It is to simply be a repository of historical songs for educational purposes.
+                    </p>
+                </div>
+
+                <hr>
+
+                <h3 class="subtitle">Song List</h3>
+
+                <div class="content">
+                    <div class="accordion" id="song-list">
+                        
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Middle Ages through the German Renaissance (1200-1700)
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#song-list">
+                            <div class="accordion-body">
+                                <p><a href="#">Sample 1</a></p>
+                                <p><a href="#">Sample 2</a></p>
+                                <p><a href="#">Sample 3</a></p>
+                                <p><a href="#">Sample 4</a></p>
+                                <p><a href="#">Sample 5</a></p>
+                                <p><a href="#">Sample 6</a></p>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Early Modern Germany (1700-1815)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#song-list">
+                            <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Process of Unification (1815-1871)
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#song-list">
+                            <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                The German Empire (1871-1914)
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#song-list">
+                                <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                The Great War (1914-1918)
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#song-list">
+                                <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                The Weimar Era (1918-1933)
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#song-list">
+                                <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="photo photo-bottom">
+                    <img class="proclamation" src="img/GermanyProclamationCropped.jpg" alt="The Proclamation of Germany">
+                    <p>The Proclamation of the German Empire, Anton von Werner, 1885</p>
+                </div>
+
+                <hr>
+
+                <div class="share">
+                    <h3 class="subtitle">Share</h3>
+                    <div class="icon-bar-foot">
+                        <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
+                        <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            © James Partsafas 2021
+        </footer>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
