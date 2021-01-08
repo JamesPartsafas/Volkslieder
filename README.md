@@ -1,2 +1,2 @@
 # Volkslieder
-This repository contains a website that assembles historical German songs.
+This repository contains a website that gathers historical German songs.
