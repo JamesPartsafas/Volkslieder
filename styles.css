@@ -51,6 +51,7 @@ header {
     color: #181818;
     font-weight: 600;
     background-color: #ffffff;
+    border-radius: 2px;
 }
 
 .selected-lang.english {
@@ -207,6 +208,11 @@ hr {
     margin: auto;
     border: 1px solid #113e64;
     opacity: 1;
+}
+
+.top-hr {
+    margin-top:40px;
+    margin-bottom:-28px;
 }
 
 .subtitle-heading {
@@ -399,6 +405,7 @@ footer {
 .header-name a:hover {
     background-color: white;
     color: #113e64;
+    border-radius: 2px;
     transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
 }
