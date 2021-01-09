@@ -384,13 +384,88 @@ footer {
     background-color: #113e64;
 }
 
+/* Songs Pages Styling */
+
+.header-name a{
+    color: white;
+    padding: 5px;
+}
+
+.header-name a:hover {
+    background-color: white;
+    color: #113e64;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+
+.main.song {
+    padding-top: 40px;
+}
+
+.subtitle-name{
+    margin: 25px 0 18px 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.content.poem {
+    text-align: center;
+}
+
+.content.poem p {
+    margin-top: 18px;
+}
+
+.row.post-song {
+    width: 70%;
+    margin: 35px auto 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+}
+
+.btn-light {
+    background-color: white;
+    width: 140px;
+    height: 50px;
+    border: 2px solid #272727;
+    color: #272727;
+    margin-bottom: 10px;
+}
+
+.btn-light:hover {
+    background-color: #113e64;
+    color: white;
+    border: 2px solid #272727;
+}
+
+.btn-light:focus {
+    background-color: white;
+    color: #272727;
+    border: 2px solid #272727;
+}
+
+.btn-light a {
+    color: #272727;
+}
+
+.btn-light a:hover {
+    background-color: #113e64;
+    color: white;
+}
+
 @media (max-width: 1550px) {
 
     .main {
         width: 70%;
     }
 
-    .photo, .intro, .content, .share {
+    .adjust {
         width: 75%;
     }
 
@@ -406,7 +481,7 @@ footer {
         width: 80%;
     }
 
-    .photo, .intro, .content, .share {
+    .adjust {
         width: 80%;
     }
 
@@ -426,7 +501,7 @@ footer {
         width: 550px;
     }
 
-    .photo, .intro, .content, .share {
+    .adjust {
         width: 85%;
     }
 
@@ -446,7 +521,7 @@ footer {
         display: none;
     }
 
-    .photo, .intro, .content, .share {
+    .adjust {
         width: 90%;
     }
 
@@ -474,8 +549,25 @@ footer {
         width: 100%;
     }
 
-    .photo, .intro, .content, .share {
+    .adjust {
         width: 93%;
+    }
+
+}
+
+@media print {
+    
+    header, .share, .icon-bar, hr, .post-song, footer {
+        display: none;
+        border: 0;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    p {
+        font-size: 13px;
     }
 
 }
