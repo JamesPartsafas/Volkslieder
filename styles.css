@@ -358,6 +358,10 @@ footer {
     margin: auto;
 }
 
+.share.songs {
+    margin-bottom: 50px;
+}
+
 .icon-bar-foot {
     text-align: center;
     margin-top: 25px;
@@ -421,7 +425,7 @@ footer {
 
 .row.post-song {
     width: 70%;
-    margin: 35px auto 0;
+    margin: 35px auto -20px;
     text-align: center;
     font-weight: 700;
     font-size: 20px;
@@ -457,6 +461,10 @@ footer {
 .btn-light a:hover {
     background-color: #113e64;
     color: white;
+}
+
+.end {
+    margin-top: 50px;
 }
 
 @media (max-width: 1550px) {
@@ -557,7 +565,7 @@ footer {
 
 @media print {
     
-    header, .share, .icon-bar, hr, .post-song, footer {
+    header, .share, .icon-bar, hr, .post-song, footer, .disclaimer {
         display: none;
         border: 0;
     }
