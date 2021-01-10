@@ -29,6 +29,9 @@
                 var paragraph = document.getElementById("disclaimer-bottom");
                 paragraph.textContent += "This website is not to be interpreted as political in any " +
                 "manner. It is to simply be a repository of historical songs for educational purposes.";
+
+                var paragraph = document.getElementById("site-wide-message");
+                paragraph.textContent += ""; // Insert message here
             } 
             // Check if the URL parameter is french
             else if (dynamicContent == 'fr') {
@@ -42,6 +45,9 @@
                 var paragraph = document.getElementById("disclaimer-bottom");
                 paragraph.textContent += "Ce site web ne doit pas être interprété comme étant politique " + 
                 "de quelque manière que ce soit. Il s'agit uniquement d'un recueil de chansons historiques à des fins éducatives.";
+
+                var paragraph = document.getElementById("site-wide-message");
+                paragraph.textContent += ""; // Insert message here
             }
             // Check if the URL parameter is german or not defined, display default content
             else {
@@ -55,11 +61,9 @@
                 var paragraph = document.getElementById("disclaimer-bottom");
                 paragraph.textContent += "Diese Webseite soll in keiner Weise als politisch interpretiert werden. " +
                 "Sie soll nur eine Sammlung von historischen Liedern zu Bildungszwecken sein.";
+
+                var paragraph = document.getElementById("site-wide-message");
+                paragraph.textContent += ""; // Insert message here
             }
-            
-            // Option to display site-wide-message at top of every song page
-            $('.site-wide').hide();
-            var paragraph = document.getElementById("site-wide-message");
-            paragraph.textContent += ""; // Insert message here
 
         });
