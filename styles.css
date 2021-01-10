@@ -124,15 +124,15 @@ header {
     text-decoration: underline;
 }
 
-.de:before {
+.-de:before {
     background-image: url(https://www.countryflags.io/de/flat/32.png);
 }
 
-.en:before {
+.-en:before {
     background-image: url(https://www.countryflags.io/gb/flat/32.png);
 }
 
-.fr:before {
+.-fr:before {
     background-image: url(https://www.countryflags.io/fr/flat/32.png);
 }
 
@@ -149,6 +149,13 @@ header {
     background-color: white !important;
     color: #181818 !important;
     font-weight: 600;
+}
+
+.glyphicon {
+    display: none !important;
+}
+
+.select {
 }
 
 .dropdown img {
