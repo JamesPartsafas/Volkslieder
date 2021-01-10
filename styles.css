@@ -1,3 +1,8 @@
+.default-message {
+    position: relative;
+    bottom: 7px;
+}
+
 a {
     text-decoration: none;
     color: #557A95;
@@ -153,9 +158,6 @@ header {
 
 .glyphicon {
     display: none !important;
-}
-
-.select {
 }
 
 .dropdown img {
