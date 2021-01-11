@@ -174,7 +174,7 @@ header {
 .main {
     margin: 0 auto 70px;
     width: 60%;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     position: relative;
     min-height: 100vh;
     border: solid #cccdd3;
@@ -273,7 +273,7 @@ hr {
     font-family: 'Merriweather', serif;
     padding-left: 0px;
     padding-right: 0px;
-    background-color: #ffffff !important;
+    background-color: #f9f9f9 !important;
 }
 
 .accordion-button:hover {
@@ -586,8 +586,12 @@ footer {
 
 @media print {
     
-    header, .share, .icon-bar, hr, .post-song, footer, .disclaimer {
+    header, .share, .icon-bar, hr, .post-song, footer, .disclaimer, .site-wide {
         display: none;
+        border: 0;
+    }
+
+    .main {
         border: 0;
     }
 
