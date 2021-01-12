@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!-- CSS Sheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/1e07fc90b9.js" crossorigin="anonymous"></script>
+    
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <title>Volkslieder</title>
+  </head>
+
+  <body>
+
+    <header class="sticky-top">
+        <div class="row heading">
+            <div class="col-6 col-head">
+                <p class="header-name">
+                    <a href="index-fr.html">Volkslieder</a>
+                </p>
+            </div>
+            <div class="col-6 lang col-head">
+                
+                <div class="lang-menu">
+
+                    <div class="selected-lang french">
+                        Français
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="index.html" class="-en">English</a>
+                        </li>
+                        <li>
+                            <a href="index-fr.html" class="-fr">Français</a>
+                        </li>
+                        <li>
+                            <a href="index-de.html" class="-de">Deutsch</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown show">
+                    <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="en dynamic-content select"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</div>
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="index.html"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item" href="index-fr.html"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
+                      <a class="dropdown-item" href="index-de.html"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="content-wrapper">
+
+            <div class="icon-bar">
+                <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
+                <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
+            </div>
+            
+            <div class="main">
+                
+                <hr class="top-hr">
+
+                <h3 class="subtitle-title">Volkslieder:</h3>
+                <h3 class="subtitle-heading">Musique historique allemande</h3>
+                
+                <div class="photo adjust">
+                    <img src="img/Caspar_David_Friedrich_Cropped.jpg" alt="A Painting of a German Landscape">
+                    <p>Les Âges de la vie, Caspar David Friedrich, 1835</p>
+                </div>
+
+                <hr>
+
+                <div class="intro adjust">
+                    <p class="disclaimer">
+                        Ici ce retrouve un recueil de chansons et de poèmes allemands historiques, couvrant des périodes 
+                        allant de Moyen Âge jusqu'à quelques années après la Grande Guerre. Ces chansons peuvent avoir 
+                        été chantées à diverses occasions, y compris pendant les jours de travail, pendant les 
+                        moments de détente à la maison, pendant les marches ou lors de nombreux événements spéciaux. 
+                        Ce site web ne doit pas être interprété comme étant politique de quelque manière que ce soit. 
+                        Il s'agit uniquement d'un recueil de chansons historiques à des fins éducatives.
+                    </p>
+                </div>
+
+                <hr>
+
+                <h3 class="subtitle">Liste de chansons</h3>
+
+                <div class="content adjust">
+                    <div class="accordion" id="song-list">
+                        
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Du Moyen Âge à la Renaissance allemande (~1200-1600)
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#song-list">
+                            <div class="accordion-body">
+                                <a href="songs/1200/slafestdufriedelziere.html?dc=fr"><p>Slâfest du friedel ziere (~1180)</p></a>
+                                <a href="songs/1200/erec.html?dc=fr"><p>Erec, Hartmann von Aue (~1190)</p></a>
+                                <a href="songs/1200/iwein.html?dc=fr"><p>Iwein, Hartman von Aue (~1200)</p></a>
+                                <a href="songs/1200/insohoherswebenderwunne.html?dc=fr"><p>In so hoher swebender wunne (~1200)</p></a>
+                                <a href="songs/1200/nibelungenlied.html?dc=fr"><p>Nibelungenlied (~1204)</p></a>
+                                <a href="songs/1200/palaestinalied.html?dc=fr"><p>Palästinalied, Walther von der Vogelweide (~1217)</p></a>
+                                <a href="songs/1200/frauendienst.html?dc=fr"><p>Frauendienst, Ulrich von Liechtenstein (1255)</p></a>
+                                <a href="songs/1200/esnahetgenderuasenacht.html?dc=fr"><p>Es nahet gen der uasenacht, Oswald von Wolkenstein (~1400)</p></a>
+                                <a href="songs/1200/voegeleinhoertmannichtmehrsingen.html?dc=fr"><p>Vögelein hört man nicht mehr singen, Neidhard von Reuenthal (~1400)</p></a>
+                                <a href="songs/1200/esisteinschneegefallen.html?dc=fr"><p>Es ist ein Schnee gefallen (1467)</p></a>
+                                <a href="songs/1200/wirzogenindasfeld.html?dc=fr"><p>Wir Zogen in das Feld (1509)</p></a>
+                                <a href="songs/1200/allmorgenistganzfrischundneu.html?dc=fr"><p>All Morgen ist ganz frisch und neu, Johannes Zwick (1542)</p></a>
+                                <a href="songs/1200/ichstandaufhohemberge.html?dc=fr"><p>Ich stand auf hohem Berge (1544)</p></a>
+                                <a href="songs/1200/wieschoenbluehtunsdermaien.html?dc=fr"><p>Wie schön blüht uns der Maien, Georg Forster (1549)</p></a>
+                                <a href="songs/1200/unserliebefraue.html?dc=fr"><p>Unser liebe Fraue, Georg Forster (1556)</p></a>
+                                <a href="songs/1200/achelseleinliebeselselein.html?dc=fr"><p>Ach Elslein liebes Elselein, Galliardt von Nicolao Rosthio (1593)</p></a>
+                                <a href="songs/1200/esisteinrosentsprungen1599.html?dc=fr"><p>Es ist ein Ros entsprungen (1599)</p></a>
+                                <a href="songs/1200/meiedinliechterschin.html?dc=fr"><p>Meie din liechter schin, Neidhart von Reuental</p></a>
+                                <a href="songs/1200/christisterstanden.html?dc=fr"><p>Christ ist erstanden</p></a>
+                                <a href="songs/1200/sowoldirsummerwunne.html?dc=fr"><p>Sô wol dir summerwunne</p></a>
+                                <a href="songs/1200/underderlinden.html?dc=fr"><p>Under der linden</p></a>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Début des temps modernes (1600-1815)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#song-list">
+                            <div class="accordion-body">
+                                <a href="songs/1600/lasstunsdaskindleinwiegen.html?dc=fr"><p>Laßt uns das Kindlein wiegen (1604)</p></a>
+                                <a href="songs/1600/alsmariadiejungfrauschon.html?dc=fr"><p>Als Maria die Jungfrau schon (1608)</p></a>
+                                <a href="songs/1600/achbleibmitdeinergnade.html?dc=fr"><p>Ach bleib mit deiner Gnade, Josua Stegmann (~1616)</p></a>
+                                <a href="songs/1600/oheilandreissdiehimmelauf.html?dc=fr"><p>O Heiland reiß die Himmel auf, Friedrich von Langenfeld (1623)</p></a>
+                                <a href="songs/1600/machthochdietuerdietormachtweit.html?dc=fr"><p>Macht hoch die Tür die Tor macht weit, Georg Weissel (1635)</p></a>
+                                <a href="songs/1600/nunruhenallewaelder.html?dc=fr"><p>Nun ruhen alle Wälder, Paul Gerhardt (1648)</p></a>
+                                <a href="songs/1600/eswarenzweikoenigskinder.html?dc=fr"><p>Es waren zwei Königskinder (1700)</p></a>
+                                <a href="songs/1600/hoertderengelhellelieder.html?dc=fr"><p>Hört der Engel helle Lieder (~1750)</p></a>
+                                <a href="songs/1600/daslebenisteintraum.html?dc=fr"><p>Das Leben ist ein Traum, Johann Gleim (1784)</p></a>
+                                <a href="songs/1600/morgenkinderwirdswasgeben.html?dc=fr"><p>Morgen, Kinder, wird's was geben (~1780)</p></a>
+                                <a href="songs/1600/einschiffleinsahichfahren.html?dc=fr"><p>Ein Schifflein sah ich fahren (1781)</p></a>
+                                <a href="songs/1600/erlkoenig.html?dc=fr"><p>Erlkönig, Johann Wolfgang von Goethe (1782)</p></a>
+                                <a href="songs/1600/mariadurcheindornwaldging.html?dc=fr"><p>Maria durch ein Dornwald ging (~1800)</p></a>
+                                <a href="songs/1600/ichhatteinenkameraden.html?dc=fr"><p>Ich hatt' einen Kameraden, Ludwig Uhland (1809)</p></a>
+                                <a href="songs/1600/odudeutschlandichmussmarschieren.html?dc=fr"><p>O du Deutschland ich muss marschieren, Ernst Arndt (1809)</p></a>
+                                <a href="songs/1600/otannenbaumdutraegsteingruenenzweig.html?dc=fr"><p>O Tannenbaum du trägst ein grünen Zweig (1812)</p></a>
+                                <a href="songs/1600/freiheitdieichmeine.html?dc=fr"><p>Freiheit die ich meine, Max von Schenkendorf (1813)</p></a>
+                                <a href="songs/1600/ineinemkuehlengrunde.html?dc=fr"><p>In einem kühlen Grunde, Joseph von Eichendorff (1813)</p></a>
+                                <a href="songs/1600/wasistdesdeutschenvaterland.html?dc=fr"><p>Was ist des Deutschen Vaterland, Ernst Arndt (1813)</p></a>
+                                <a href="songs/1600/flammeempor.html?dc=fr"><p>Flamme empor, Johann Nun (1814)</p></a>
+                                <a href="songs/1600/wennalleuntreuwerden.html?dc=fr"><p>Wenn alle untreu werden, Max von Schenkendorf (1814)</p></a>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Période d'unification (1815-1871)
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#song-list">
+                            <div class="accordion-body">
+                                <a href="songs/1815/odufroehlicheoduselige.html?dc=fr"><p>O du fröhliche, o du selige, Johannes Falk (1815)</p></a>
+                                <a href="songs/1815/stillenachtheiligenacht.html?dc=fr"><p>Stille Nacht, heilige Nacht (1818)</p></a>
+                                <a href="songs/1815/ichhabmichergeben.html?dc=fr"><p>Ich hab mich ergeben (1820)</p></a>
+                                <a href="songs/1815/dieloreley.html?dc=fr"><p>Die Loreley, Heinrich Heine (1824)</p></a>
+                                <a href="songs/1815/otannenbaum.html?dc=fr"><p>O Tannenbaum, Ernst Anschütz (1824)</p></a>
+                                <a href="songs/1815/andersaalehellemstrande.html?dc=fr"><p>An der Saale hellem Strande, Franz Kugler (1826)</p></a>
+                                <a href="songs/1815/mussidenn.html?dc=fr"><p>Muss i denn, Friedrich Silcher (1827)</p></a>
+                                <a href="songs/1815/goldundsilberliebichsehr.html?dc=fr"><p>Gold und Silber lieb ich sehr, August Schnezler (1828)</p></a>
+                                <a href="songs/1815/morgenkommtderweihnachtsmann.html?dc=fr"><p>Morgen kommt der Weihnachtsmann, Hoffman von Fallersleben (1835)</p></a>
+                                <a href="songs/1815/diewachtamrhein.html?dc=fr"><p>Die Wacht am Rhein (1840)</p></a>
+                                <a href="songs/1815/amweihnachtsbaumdielichterbrennen.html?dc=fr"><p>Am Weihnachtsbaum die Lichter brennen, Hermann Kletke (1841)</p></a>
+                                <a href="songs/1815/dermaiistgekommen.html?dc=fr"><p>Der Mai ist gekommen, Emanuel Geibel (1841)</p></a>
+                                <a href="songs/1815/esisteinrosentsprungen1844.html?dc=fr"><p>Es ist ein Ros entsprungen, Friedrich Layriz (1844)</p></a>
+                                <a href="songs/1815/heckerlied.html?dc=fr"><p>Heckerlied, Friedrich Hecker (1848)</p></a>
+                                <a href="songs/1815/alsdieroemerfrechgeworden.html?dc=fr"><p>Als die Römer frech geworden, Joseph von Scheffel (1849)</p></a>
+                                <a href="songs/1815/jetztkommendielustigentage.html?dc=fr"><p>Jetzt kommen die lustigen Tage (~1850)</p></a>
+                                <a href="songs/1815/imschwarzenwalfischzuaskalon.html?dc=fr"><p>Im schwarzen Walfisch zu Askalon, Joseph von Scheffel (1854)</p></a>
+                                <a href="songs/1815/odustillezeit.html?dc=fr"><p>O du stille Zeit, Joseph von Eichendorff (1857)</p></a>
+                                <a href="songs/1815/odeutschlandhochinehren.html?dc=fr"><p>O Deutschland hoch in Ehren, Ludwig Bauer (1859)</p></a>
+                                <a href="songs/1815/suesserdieglockennieklingen.html?dc=fr"><p>Süßer die Glocken nie klingen, Friedrich Kritzinger (1860)</p></a>
+                                <a href="songs/1815/morgenwillmeinschatzverreisen.html?dc=fr"><p>Morgen will mein Schatz verreisen (1866)</p></a>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                L'Empire allemand (1871-1914)
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#song-list">
+                                <div class="accordion-body">
+                                    <a href="songs/1871/heildirimsiegerkranz.html?dc=fr"><p>Heil dir im Siegerkranz, Heinrich Harries (1871)</p></a>
+                                    <a href="songs/1871/dunkelwarsdermondschienhelle.html?dc=fr"><p>Dunkel war’s der Mond schien helle (1880)</p></a>
+                                    <a href="songs/1871/freiweg.html?dc=fr"><p>Frei Weg, Carl Latann (1888)</p></a>
+                                    <a href="songs/1871/altekameraden.html?dc=fr"><p>Alte Kameraden, Carl Teike (1889)</p></a>
+                                    <a href="songs/1871/beimuellershatgebrannt.html?dc=fr"><p>Bei Müllers hats gebrannt (~1900)</p></a>
+                                    <a href="songs/1871/drobenimoberland.html?dc=fr"><p>Droben im Oberland (1900)</p></a>
+                                    <a href="songs/1871/bubundspinnegingenindenwald.html?dc=fr"><p>Bub und Spinne gingen in den Wald (1908)</p></a>
+                                    <a href="songs/1871/einschoenertagzuendegeht.html?dc=fr"><p>Ein schöner Tag zu Ende geht (1910)</p></a>
+                                    <a href="songs/1871/wennderhundmitderwurst.html?dc=fr"><p>Wenn der Hund mit der Wurst über´n Spucknapf springt (1911)</p></a>
+                                    <a href="songs/1871/habsonneimherzenobsstuermt.html?dc=fr"><p>Hab Sonne im Herzen ob´s stürmt, Michael Englert (1913)</p></a>
+                                    <a href="songs/1871/argonnerwaldummitternacht.html?dc=fr"><p>Argonnerwald um Mitternacht (~1914)</p></a>
+                                    <a href="songs/1871/dieblauendragoner.html?dc=fr"><p>Die blauen Dragoner, G.W. Harmssen (1914)</p></a>
+                                    <a href="songs/1871/einemugeinemaeh.html?dc=fr"><p>Eine Muh eine Mäh, Wilhelm Lindemann (1914)</p></a>
+                                    <a href="songs/1871/reservistensindwirnun.html?dc=fr"><p>Reservisten sind wir nun (1914)</p></a>
+                                    <a href="songs/1871/gaebesnureinekrone.html?dc=fr"><p>Gäb es nur eine Krone (1915)</p></a>
+                                    <a href="songs/1871/imgruenenwalddawodiedrosselsingt.html?dc=fr"><p>Im grünen Wald da wo die Drossel singt, Friederike Kempner (1915)</p></a>
+                                    <a href="songs/1871/wildgaenserauschendurchdienacht.html?dc=fr"><p>Wildgänse rauschen durch die Nacht, Walter Flex (1915)</p></a>
+                                    <a href="songs/1871/woallestrassenenden.html?dc=fr"><p>Wo alle Straßen enden (~1915)</p></a>
+                                    <a href="songs/1871/hinausindiefernemitbutterbrotundspeck.html?dc=fr"><p>Hinaus in die Ferne mit Butterbrot und Speck (1916)</p></a>
+                                    <a href="songs/1871/weitistderwegzurueckinsheimatland.html?dc=fr"><p>Weit ist der Weg zurück ins Heimatland (1917)</p></a>
+                                    <a href="songs/1871/ichbineindeutscherkenntihrmeinefarben.html?dc=fr"><p>Ich bin ein Deutscher kennt ihr meine Farben</p></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                La République de Weimar (1918-1933)
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#song-list">
+                                <div class="accordion-body">
+                                    <a href="songs/1918/aufgesellenfrohundmunter.html?dc=fr"><p>Auf Gesellen froh und munter (1918)</p></a>
+                                    <a href="songs/1918/wenndiearbeitszeitzuende.html?dc=fr"><p>Wenn die Arbeitszeit zu Ende, Jürgen Brand (1919)</p></a>
+                                    <a href="songs/1918/trumtrumterumtumtum.html?dc=fr"><p>Trum, trum, terum tum tum, Walter Gättke (1919)</p></a>
+                                    <a href="songs/1918/aufspielerdieihrvereint.html?dc=fr"><p>Auf Spieler die ihr hier vereint (~1920)</p></a>
+                                    <a href="songs/1918/aufweitergruenerheide.html?dc=fr"><p>Auf weiter grüner Heide (~1920)</p></a>
+                                    <a href="songs/1918/dasistdasliedvomtaeglichenbrot.html?dc=fr"><p>Das ist das Lied vom täglichen Brot, Jörg Mager (1920)</p></a>
+                                    <a href="songs/1918/diegrenzwachthieltimosten.html?dc=fr"><p>Die Grenzwacht hielt im Osten, Manteuffel-Katzdangen (1920)</p></a>
+                                    <a href="songs/1918/esklappertderhufamstege.html?dc=fr"><p>Es klappert der Huf am Stege, Hans Riedel (1920)</p></a>
+                                    <a href="songs/1918/derwinterderismirnetzwieder.html?dc=fr"><p>Der Winter der is mir net z´wieder , Otto Sirl (~1921)</p></a>
+                                    <a href="songs/1918/ihrkoenntedaswortverbieten.html?dc=fr"><p>Ihr könnt das Wort verbieten, Henry Mackay (1921)</p></a>
+                                    <a href="songs/1918/wirziehenueberdiestrassen.html?dc=fr"><p>Wir ziehen über die Straßen, Knott (1921)</p></a>
+                                    <a href="songs/1918/hohetannenweisendiesterne.html?dc=fr"><p>Hohe Tannen weisen die Sterne (1923)</p></a>
+                                    <a href="songs/1918/nichtskannunsrauben.html?dc=fr"><p>Nichts kann uns rauben, Karl Bröger (1923)</p></a>
+                                    <a href="songs/1918/alletagistkeinsonntag.html?dc=fr"><p>Alle Tag ist kein Sonntag (1924)</p></a>
+                                    <a href="songs/1918/wirhabenhungerhungerhunger.html?dc=fr"><p>Wir haben Hunger Hunger Hunger (1925)</p></a>
+                                    <a href="songs/1918/imwaldimgruenenwalde.html?dc=fr"><p>Im Wald im grünen Walde (1927)</p></a>
+                                    <a href="songs/1918/dasistnungarverschollen.html?dc=fr"><p>Das ist nun gar verschollen (1930)</p></a>
+                                    <a href="songs/1918/hungerhungermarmeladekarbonade.html?dc=fr"><p>Hunger Hunger Marmelade Karbonade (1930)</p></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="photo photo-bottom adjust">
+                    <img class="proclamation" src="img/Summer_Landscape_Cropped.jpg" alt="A Painting of a Summer Landscape">
+                    <p>L'été sur les rives du lac Alban, Oswald Achenbach, date unknown</p>
+                </div>
+
+                <hr>
+
+                <div class="share adjust">
+                    <h3 class="subtitle">Partager</h3>
+                    <div class="icon-bar-foot">
+                        <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
+                        <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            © James Partsafas 2021
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
