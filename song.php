@@ -1,3 +1,22 @@
+<!-- Connect to database and navigate to correct MySQL table 
+using the value of "a" in the URL and then navigates to the row of the 
+MySQL table using the value of "q" in the URL. This will
+be used to populate the page dynamically. -->
+<?php
+    if(isset($_GET['a']) && isset($_GET['q'])){
+        include_once 'includes/dbh.inc.php';
+        $a = mysqli_real_escape_string($conn, $_GET['a']);
+        $q = mysqli_real_escape_string($conn, $_GET['q']);
+
+        $sql = "SELECT * FROM $a WHERE link='$q'";
+        $result = mysqli_query($conn, $sql) or die(header('Location: index.php')); //Redirect on broken "a" tags
+        $row = mysqli_fetch_array($result);
+    } 
+    else {
+        header('Location: index.php'); //Redirect on nonexistent a or q tags
+    }
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +29,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     
     <!-- CSS Sheet -->
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +42,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-    <title>Volkslieder</title>
+    <title><?php echo $row['title']; ?></title>
   </head>
 
 <body>
@@ -32,13 +51,12 @@
         <div class="row heading">
             <div class="col-6 col-head">
                 <p class="header-name">
-                    <a class="en dynamic-content" href="../../index.html">Volkslieder</a>
-                    <a class="fr dynamic-content" href="../../index-fr.html">Volkslieder</a>
-                    <a class="de dynamic-content" href="../../index-de.html">Volkslieder</a>
+                    <a class="dynamic-content" href="index.php?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
                 </p>
             </div>
             <div class="col-6 lang col-head">
                 
+                <!-- Language menu on desktop view -->
                 <div class="lang-menu">
                     <div class="en dynamic-content">
                         <div class="selected-lang english">
@@ -57,17 +75,18 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="aufgesellenfrohundmunter.html?dc=en" class="-en">English</a>
+                            <a href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=en" class="-en">English</a>
                         </li>
                         <li>
-                            <a href="aufgesellenfrohundmunter.html?dc=fr" class="-fr">Français</a>
+                            <a href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=fr" class="-fr">Français</a>
                         </li>
                         <li>
-                            <a href="aufgesellenfrohundmunter.html?dc=de" class="-de">Deutsch</a>
+                            <a href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=de" class="-de">Deutsch</a>
                         </li>
                     </ul>
                 </div>
-
+                
+                <!-- Language menu on mobile view -->
                 <div class="dropdown show">
                     <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="en dynamic-content select"><img src="https://www.countryflags.io/gb/flat/32.png"> English</div>
@@ -76,9 +95,9 @@
                     </a>
                   
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="aufgesellenfrohundmunter.html?dc=en"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
-                      <a class="dropdown-item" href="aufgesellenfrohundmunter.html?dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
-                      <a class="dropdown-item" href="aufgesellenfrohundmunter.html?dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
+                      <a class="dropdown-item" href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=en"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item" href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
+                      <a class="dropdown-item" href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
                     </div>
                 </div>
 
@@ -88,13 +107,7 @@
 
     <div class="page-container">
         <div class="content-wrapper">
-            <div class="icon-bar">
-                <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
-                <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
-                <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
-            </div>
+            <?php echo file_get_contents("template/share-sidebar.html") ?>
 
             <div class="main song">
                 <hr>
@@ -105,60 +118,33 @@
                     <hr>
                 </div>
 
-                <h3 class="subtitle-name">Auf Gesellen froh und munter</h3>
-                <div class="content poem adjust">
-                    <p>
-                        Auf Gesellen froh und munter<br>
-                        schenkt die Gläser voller Wein<br>
-                        denn unser Handwerk geht niemals unter<br>
-                        lustige Zimmerleute wollen wir sein<br>
-                    </p>
-                    <p>
-                        Meister gib uns die Papiere<br>
-                        Meister gib uns unser Geld<br>
-                        die schönen Mädchen , die sind uns lieber<br>
-                        als die Schafferei auf dieser Welt<br>
-                    </p>
-                    <p>
-                        Denn wir brauchen´s keinen Kaiser<br>
-                        und wir brauchen´s keinen Gott<br>
-                        Denn der Krieg war nur für Reiche<br>
-                        und der arme Teufel ging kaputt<br>
-                    </p>
-                </div>
+                <!-- Song title and lyrics retrieved from database -->
+                <h3 class="subtitle-name"><?php echo $row['title']; ?></h3> 
+                <div class="content poem adjust"><?php echo $row['content']; ?></div>
 
                 <hr>
                 
                 <div class="en dynamic-content">
                     <div class="row post-song adjust">
-                        <div class="col-sm-6"><a href="../../index.html"><button type="button" class="btn btn-light">Return</button></a></div>
+                        <div class="col-sm-6"><a href="index.php?dc=en"><button type="button" class="btn btn-light">Return</button></a></div>
                         <div class="col-sm-6"><button type="button" class="btn btn-light" onclick="print();">Print</button></div>
                     </div>
                 </div>
                 <div class="fr dynamic-content">
                     <div class="row post-song adjust">
-                        <div class="col-sm-6"><a href="../../index-fr.html"><button type="button" class="btn btn-light">Retourner</button></a></div>
+                        <div class="col-sm-6"><a href="index.php?dc=fr"><button type="button" class="btn btn-light">Retourner</button></a></div>
                         <div class="col-sm-6"><button type="button" class="btn btn-light" onclick="print();">Imprimer</button></div>
                     </div>
                 </div>
                 <div class="de dynamic-content">
                     <div class="row post-song adjust">
-                        <div class="col-sm-6"><a href="../../index-de.html"><button type="button" class="btn btn-light">Zurück</button></a></div>
+                        <div class="col-sm-6"><a href="index.php?dc=de"><button type="button" class="btn btn-light">Zurück</button></a></div>
                         <div class="col-sm-6"><button type="button" class="btn btn-light" onclick="print();">Drucken</button></div>
                     </div>
                 </div>
 
-                <div class="share songs adjust">
-                    <h3 class="dynamic-content subtitle" id="sharing"></h3>
-                    <h3 class="default-message dynamic-content subtitle" id="sharing">Teilen</h3>
-                    <div class="icon-bar-foot">
-                        <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
-                        <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
-                        <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
+                <?php echo file_get_contents("template/share-bottom.html") ?>
+
                 <hr>
                 <div class="intro adjust">
                     <p class="disclaimer dynamic-content" id="disclaimer-bottom"></p>
@@ -170,15 +156,13 @@
 
                 <hr>
             </div>
-
-        </div>
+            </div>
         <footer>
             © James Partsafas 2021
         </footer>
     </div>
-    
 
-    <script src="../../lang.js"></script>
+    <script src="lang.js"></script>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

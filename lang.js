@@ -1,5 +1,5 @@
     //This js file allows for pages to be dynamically translated by hiding and displaying different text depending on the url of the page
-    //The url must end with ?dc=param where param is en, fr, or de
+    //The url must end with ?dc=param where param is en, fr, or de. If param is improperly formatted, it defaults to de settings (German).
         // Parse the URL parameter
         function getParameterByName(name, url) {
             if (!url) url = window.location.href;
@@ -17,7 +17,7 @@
 
             $('.default-message').hide();
      
-            // Check if the URL parameter is english
+            // Check if the URL parameter is English
             if (dynamicContent == 'en') {
                 $('.en').show();
                 $('.fr').hide();
@@ -33,7 +33,7 @@
                 var paragraph = document.getElementById("site-wide-message");
                 paragraph.textContent += ""; // Insert message here
             } 
-            // Check if the URL parameter is french
+            // Check if the URL parameter is French
             else if (dynamicContent == 'fr') {
                 $('.en').hide();
                 $('.fr').show();
@@ -49,7 +49,7 @@
                 var paragraph = document.getElementById("site-wide-message");
                 paragraph.textContent += ""; // Insert message here
             }
-            // Check if the URL parameter is german or not defined, display default content
+            // Check if the URL parameter is German or not defined, display default content
             else {
                 $('.en').hide();
                 $('.fr').hide();
