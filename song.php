@@ -3,7 +3,7 @@ using the value of "a" in the URL and then navigates to the row of the
 MySQL table using the value of "q" in the URL. This will
 be used to populate the page dynamically. -->
 <?php
-    if(isset($_GET['a']) && isset($_GET['q'])){
+    if(isset($_GET['a']) && isset($_GET['q']) && isset($_GET['dc'])){
         include_once 'includes/dbh.inc.php';
         $a = mysqli_real_escape_string($conn, $_GET['a']);
         $q = mysqli_real_escape_string($conn, $_GET['q']);
@@ -13,7 +13,7 @@ be used to populate the page dynamically. -->
         $row = mysqli_fetch_array($result);
     } 
     else {
-        header('Location: index.php'); //Redirect on nonexistent a or q tags
+        header('Location: index.php?dc=de'); //Redirect on nonexistent a, q, or dc tags to German homepage
     }
 ?>
 
@@ -43,6 +43,7 @@ be used to populate the page dynamically. -->
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <title><?php echo $row['title']; ?></title>
+    <meta name="description" content="<?php echo $row['title']; ?>">
   </head>
 
 <body>
