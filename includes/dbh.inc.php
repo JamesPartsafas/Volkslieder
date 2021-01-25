@@ -9,5 +9,5 @@ $dbUsername = "root";
 $dbPassword = "";
 $dbName = "test";
 
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName) or die("Connection to server failed. Try again later.");
 $conn->set_charset("utf8");

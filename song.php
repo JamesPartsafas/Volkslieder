@@ -3,22 +3,30 @@ using the value of "a" in the URL and then navigates to the row of the
 MySQL table using the value of "q" in the URL. This will
 be used to populate the page dynamically. -->
 <?php
-    if(isset($_GET['a']) && isset($_GET['q']) && isset($_GET['dc'])){
+    if(isset($_GET['a']) && isset($_GET['q'])){
         include_once 'includes/dbh.inc.php';
         $a = mysqli_real_escape_string($conn, $_GET['a']);
         $q = mysqli_real_escape_string($conn, $_GET['q']);
 
         $sql = "SELECT * FROM $a WHERE link='$q'";
-        $result = mysqli_query($conn, $sql) or die(header('Location: index.php')); //Redirect on broken "a" tags
+        $result = mysqli_query($conn, $sql) or die(header('Location: index.php?dc=de')); //Redirect on broken "a" tags to German homepage
         $row = mysqli_fetch_array($result);
+        
+        if(!mysqli_num_rows ( $result )) {
+            (header('Location: index.php?dc=de')); //Redirect on broken "q" tags to German homepage
+        }
     } 
     else {
-        header('Location: index.php?dc=de'); //Redirect on nonexistent a, q, or dc tags to German homepage
+        header('Location: index.php?dc=de'); //Redirect on missing a or q tags to German homepage
+    }
+
+    if(!isset ($_GET['dc'])) {
+        header('Location: song.php?a='.$_GET['a'].'&q='.$_GET['q'].'&dc=de'); //Redirect on missing dc tag to German version of current page
     }
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="<?php echo $_GET['dc']; ?>">
   <head>
 
     <!-- Required meta tags -->
@@ -41,9 +49,10 @@ be used to populate the page dynamically. -->
     <!-- Scripts -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="lang.js"></script>
 
     <title><?php echo $row['title']; ?></title>
-    <meta name="description" content="<?php echo $row['title']; ?>">
+    <meta name="description" content="<?php echo $row['display']; ?>">
   </head>
 
 <body>
@@ -76,13 +85,13 @@ be used to populate the page dynamically. -->
                     </div>
                     <ul>
                         <li>
-                            <a href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=en" class="-en">English</a>
+                            <a href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=en" class="-en">English</a>
                         </li>
                         <li>
-                            <a href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=fr" class="-fr">Français</a>
+                            <a href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=fr" class="-fr">Français</a>
                         </li>
                         <li>
-                            <a href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=de" class="-de">Deutsch</a>
+                            <a href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=de" class="-de">Deutsch</a>
                         </li>
                     </ul>
                 </div>
@@ -96,9 +105,9 @@ be used to populate the page dynamically. -->
                     </a>
                   
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=en"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
-                      <a class="dropdown-item" href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
-                      <a class="dropdown-item" href="song.php?a=<?php echo $_GET['a']."&q=".$_GET['q']; ?>&dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
+                      <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=en"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
+                      <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
                     </div>
                 </div>
 
@@ -162,8 +171,6 @@ be used to populate the page dynamically. -->
             © James Partsafas 2021
         </footer>
     </div>
-
-    <script src="lang.js"></script>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -2,10 +2,12 @@
     if(!isset($_GET['dc'])){
         header('Location: index.php?dc=de'); //Redirect on nonexistent dc tag to German homepage
     }
+
+    include_once 'includes/dbh.inc.php';
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="<?php echo $_GET['dc']; ?>">
   <head>
 
     <!-- Required meta tags -->
@@ -28,6 +30,7 @@
     <!-- Scripts -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="lang.js"></script>
     
     <title>Volkslieder</title>
     <meta name="description" content="Historic German Songs">
@@ -171,6 +174,20 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#song-list">
                             <div class="accordion-body">
+                                <?php                           
+                                    $sql = "SELECT * FROM song_1200";
+                                    $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
+
+                                    if(mysqli_num_rows($result) > 0) {
+                                        while($row = mysqli_fetch_array($result)) {
+                                            echo "<a href='song.php?a=song_1200&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                        }
+                                    }
+                                    else {
+                                        echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
+                                    }
+                                ?>
+
                                 <a href="songs/1200/slafestdufriedelziere.html?dc=en"><p>Slâfest du friedel ziere (~1180)</p></a>
                                 <a href="songs/1200/erec.html?dc=en"><p>Erec, Hartmann von Aue (~1190)</p></a>
                                 <a href="songs/1200/iwein.html?dc=en"><p>Iwein, Hartman von Aue (~1200)</p></a>
@@ -206,6 +223,21 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#song-list">
                             <div class="accordion-body">
+                                <?php                           
+                                    $sql = "SELECT * FROM song_1600";
+                                    $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
+
+                                    if(mysqli_num_rows($result) > 0) {
+                                        while($row = mysqli_fetch_array($result)) {
+                                            echo "<a href='song.php?a=song_1600&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                        }
+                                    }
+                                    else {
+                                        echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
+                                    }
+                                ?>
+
+
                                 <a href="songs/1600/lasstunsdaskindleinwiegen.html?dc=en"><p>Laßt uns das Kindlein wiegen (1604)</p></a>
                                 <a href="songs/1600/alsmariadiejungfrauschon.html?dc=en"><p>Als Maria die Jungfrau schon (1608)</p></a>
                                 <a href="songs/1600/achbleibmitdeinergnade.html?dc=en"><p>Ach bleib mit deiner Gnade, Josua Stegmann (~1616)</p></a>
@@ -357,8 +389,6 @@
             © James Partsafas 2021
         </footer>
     </div>
-
-    <script src="lang.js"></script>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
