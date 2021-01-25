@@ -53,6 +53,7 @@ be used to populate the page dynamically. -->
 
     <title><?php echo $row['title']; ?></title>
     <meta name="description" content="<?php echo $row['display']; ?>">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
   </head>
 
 <body>

@@ -34,6 +34,7 @@
     
     <title>Volkslieder</title>
     <meta name="description" content="Historic German Songs">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
   </head>
 
   <body>
@@ -214,29 +215,6 @@
                                         echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
                                     }
                                 ?>
-
-
-                                <a href="songs/1600/lasstunsdaskindleinwiegen.html?dc=en"><p>Laßt uns das Kindlein wiegen (1604)</p></a>
-                                <a href="songs/1600/alsmariadiejungfrauschon.html?dc=en"><p>Als Maria die Jungfrau schon (1608)</p></a>
-                                <a href="songs/1600/achbleibmitdeinergnade.html?dc=en"><p>Ach bleib mit deiner Gnade, Josua Stegmann (~1616)</p></a>
-                                <a href="songs/1600/oheilandreissdiehimmelauf.html?dc=en"><p>O Heiland reiß die Himmel auf, Friedrich von Langenfeld (1623)</p></a>
-                                <a href="songs/1600/machthochdietuerdietormachtweit.html?dc=en"><p>Macht hoch die Tür die Tor macht weit, Georg Weissel (1635)</p></a>
-                                <a href="songs/1600/nunruhenallewaelder.html?dc=en"><p>Nun ruhen alle Wälder, Paul Gerhardt (1648)</p></a>
-                                <a href="songs/1600/eswarenzweikoenigskinder.html?dc=en"><p>Es waren zwei Königskinder (1700)</p></a>
-                                <a href="songs/1600/hoertderengelhellelieder.html?dc=en"><p>Hört der Engel helle Lieder (~1750)</p></a>
-                                <a href="songs/1600/daslebenisteintraum.html?dc=en"><p>Das Leben ist ein Traum, Johann Gleim (1784)</p></a>
-                                <a href="songs/1600/morgenkinderwirdswasgeben.html?dc=en"><p>Morgen, Kinder, wird's was geben (~1780)</p></a>
-                                <a href="songs/1600/einschiffleinsahichfahren.html?dc=en"><p>Ein Schifflein sah ich fahren (1781)</p></a>
-                                <a href="songs/1600/erlkoenig.html?dc=en"><p>Erlkönig, Johann Wolfgang von Goethe (1782)</p></a>
-                                <a href="songs/1600/mariadurcheindornwaldging.html?dc=en"><p>Maria durch ein Dornwald ging (~1800)</p></a>
-                                <a href="songs/1600/ichhatteinenkameraden.html?dc=en"><p>Ich hatt' einen Kameraden, Ludwig Uhland (1809)</p></a>
-                                <a href="songs/1600/odudeutschlandichmussmarschieren.html?dc=en"><p>O du Deutschland ich muss marschieren, Ernst Arndt (1809)</p></a>
-                                <a href="songs/1600/otannenbaumdutraegsteingruenenzweig.html?dc=en"><p>O Tannenbaum du trägst ein grünen Zweig (1812)</p></a>
-                                <a href="songs/1600/freiheitdieichmeine.html?dc=en"><p>Freiheit die ich meine, Max von Schenkendorf (1813)</p></a>
-                                <a href="songs/1600/ineinemkuehlengrunde.html?dc=en"><p>In einem kühlen Grunde, Joseph von Eichendorff (1813)</p></a>
-                                <a href="songs/1600/wasistdesdeutschenvaterland.html?dc=en"><p>Was ist des Deutschen Vaterland, Ernst Arndt (1813)</p></a>
-                                <a href="songs/1600/flammeempor.html?dc=en"><p>Flamme empor, Johann Nun (1814)</p></a>
-                                <a href="songs/1600/wennalleuntreuwerden.html?dc=en"><p>Wenn alle untreu werden, Max von Schenkendorf (1814)</p></a>
                             </div>
                         </div>
                         </div>
