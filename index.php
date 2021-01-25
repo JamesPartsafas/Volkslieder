@@ -187,28 +187,6 @@
                                         echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
                                     }
                                 ?>
-
-                                <a href="songs/1200/slafestdufriedelziere.html?dc=en"><p>Slâfest du friedel ziere (~1180)</p></a>
-                                <a href="songs/1200/erec.html?dc=en"><p>Erec, Hartmann von Aue (~1190)</p></a>
-                                <a href="songs/1200/iwein.html?dc=en"><p>Iwein, Hartman von Aue (~1200)</p></a>
-                                <a href="songs/1200/insohoherswebenderwunne.html?dc=en"><p>In so hoher swebender wunne (~1200)</p></a>
-                                <a href="songs/1200/nibelungenlied.html?dc=en"><p>Nibelungenlied (~1204)</p></a>
-                                <a href="songs/1200/palaestinalied.html?dc=en"><p>Palästinalied, Walther von der Vogelweide (~1217)</p></a>
-                                <a href="songs/1200/frauendienst.html?dc=en"><p>Frauendienst, Ulrich von Liechtenstein (1255)</p></a>
-                                <a href="songs/1200/esnahetgenderuasenacht.html?dc=en"><p>Es nahet gen der uasenacht, Oswald von Wolkenstein (~1400)</p></a>
-                                <a href="songs/1200/voegeleinhoertmannichtmehrsingen.html?dc=en"><p>Vögelein hört man nicht mehr singen, Neidhard von Reuenthal (~1400)</p></a>
-                                <a href="songs/1200/esisteinschneegefallen.html?dc=en"><p>Es ist ein Schnee gefallen (1467)</p></a>
-                                <a href="songs/1200/wirzogenindasfeld.html?dc=en"><p>Wir Zogen in das Feld (1509)</p></a>
-                                <a href="songs/1200/allmorgenistganzfrischundneu.html?dc=en"><p>All Morgen ist ganz frisch und neu, Johannes Zwick (1542)</p></a>
-                                <a href="songs/1200/ichstandaufhohemberge.html?dc=en"><p>Ich stand auf hohem Berge (1544)</p></a>
-                                <a href="songs/1200/wieschoenbluehtunsdermaien.html?dc=en"><p>Wie schön blüht uns der Maien, Georg Forster (1549)</p></a>
-                                <a href="songs/1200/unserliebefraue.html?dc=en"><p>Unser liebe Fraue, Georg Forster (1556)</p></a>
-                                <a href="songs/1200/achelseleinliebeselselein.html?dc=en"><p>Ach Elslein liebes Elselein, Galliardt von Nicolao Rosthio (1593)</p></a>
-                                <a href="songs/1200/esisteinrosentsprungen1599.html?dc=en"><p>Es ist ein Ros entsprungen (1599)</p></a>
-                                <a href="songs/1200/meiedinliechterschin.html?dc=en"><p>Meie din liechter schin, Neidhart von Reuental</p></a>
-                                <a href="songs/1200/christisterstanden.html?dc=en"><p>Christ ist erstanden</p></a>
-                                <a href="songs/1200/sowoldirsummerwunne.html?dc=en"><p>Sô wol dir summerwunne</p></a>
-                                <a href="songs/1200/underderlinden.html?dc=en"><p>Under der linden</p></a>
                             </div>
                         </div>
                         </div>

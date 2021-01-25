@@ -7,7 +7,7 @@ character encoding to UTF-8 -->
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "test";
+$dbName = "songs";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName) or die("Connection to server failed. Try again later.");
 $conn->set_charset("utf8");
