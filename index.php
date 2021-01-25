@@ -229,27 +229,19 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#song-list">
                             <div class="accordion-body">
-                                <a href="songs/1815/odufroehlicheoduselige.html?dc=en"><p>O du fröhliche, o du selige, Johannes Falk (1815)</p></a>
-                                <a href="songs/1815/stillenachtheiligenacht.html?dc=en"><p>Stille Nacht, heilige Nacht (1818)</p></a>
-                                <a href="songs/1815/ichhabmichergeben.html?dc=en"><p>Ich hab mich ergeben (1820)</p></a>
-                                <a href="songs/1815/dieloreley.html?dc=en"><p>Die Loreley, Heinrich Heine (1824)</p></a>
-                                <a href="songs/1815/otannenbaum.html?dc=en"><p>O Tannenbaum, Ernst Anschütz (1824)</p></a>
-                                <a href="songs/1815/andersaalehellemstrande.html?dc=en"><p>An der Saale hellem Strande, Franz Kugler (1826)</p></a>
-                                <a href="songs/1815/mussidenn.html?dc=en"><p>Muss i denn, Friedrich Silcher (1827)</p></a>
-                                <a href="songs/1815/goldundsilberliebichsehr.html?dc=en"><p>Gold und Silber lieb ich sehr, August Schnezler (1828)</p></a>
-                                <a href="songs/1815/morgenkommtderweihnachtsmann.html?dc=en"><p>Morgen kommt der Weihnachtsmann, Hoffman von Fallersleben (1835)</p></a>
-                                <a href="songs/1815/diewachtamrhein.html?dc=en"><p>Die Wacht am Rhein (1840)</p></a>
-                                <a href="songs/1815/amweihnachtsbaumdielichterbrennen.html?dc=en"><p>Am Weihnachtsbaum die Lichter brennen, Hermann Kletke (1841)</p></a>
-                                <a href="songs/1815/dermaiistgekommen.html?dc=en"><p>Der Mai ist gekommen, Emanuel Geibel (1841)</p></a>
-                                <a href="songs/1815/esisteinrosentsprungen1844.html?dc=en"><p>Es ist ein Ros entsprungen, Friedrich Layriz (1844)</p></a>
-                                <a href="songs/1815/heckerlied.html?dc=en"><p>Heckerlied, Friedrich Hecker (1848)</p></a>
-                                <a href="songs/1815/alsdieroemerfrechgeworden.html?dc=en"><p>Als die Römer frech geworden, Joseph von Scheffel (1849)</p></a>
-                                <a href="songs/1815/jetztkommendielustigentage.html?dc=en"><p>Jetzt kommen die lustigen Tage (~1850)</p></a>
-                                <a href="songs/1815/imschwarzenwalfischzuaskalon.html?dc=en"><p>Im schwarzen Walfisch zu Askalon, Joseph von Scheffel (1854)</p></a>
-                                <a href="songs/1815/odustillezeit.html?dc=en"><p>O du stille Zeit, Joseph von Eichendorff (1857)</p></a>
-                                <a href="songs/1815/odeutschlandhochinehren.html?dc=en"><p>O Deutschland hoch in Ehren, Ludwig Bauer (1859)</p></a>
-                                <a href="songs/1815/suesserdieglockennieklingen.html?dc=en"><p>Süßer die Glocken nie klingen, Friedrich Kritzinger (1860)</p></a>
-                                <a href="songs/1815/morgenwillmeinschatzverreisen.html?dc=en"><p>Morgen will mein Schatz verreisen (1866)</p></a>
+                                <?php                           
+                                    $sql = "SELECT * FROM song_1815";
+                                    $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
+
+                                    if(mysqli_num_rows($result) > 0) {
+                                        while($row = mysqli_fetch_array($result)) {
+                                            echo "<a href='song.php?a=song_1815&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                        }
+                                    }
+                                    else {
+                                        echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
+                                    }
+                                ?>
                             </div>
                         </div>
                         </div>
@@ -257,34 +249,26 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <div class="en dynamic-content">The German Empire (1871-1914)</div>
-                                <div class="fr dynamic-content">L'Empire allemand (1871-1914)</div>
-                                <div class="de dynamic-content">Das Deutsche Kaiserreich (1871-1914)</div>
+                                <div class="en dynamic-content">The German Empire (1871-1918)</div>
+                                <div class="fr dynamic-content">L'Empire allemand (1871-1918)</div>
+                                <div class="de dynamic-content">Das Deutsche Kaiserreich (1871-1918)</div>
                             </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#song-list">
                                 <div class="accordion-body">
-                                    <a href="songs/1871/heildirimsiegerkranz.html?dc=en"><p>Heil dir im Siegerkranz, Heinrich Harries (1871)</p></a>
-                                    <a href="songs/1871/dunkelwarsdermondschienhelle.html?dc=en"><p>Dunkel war’s der Mond schien helle (1880)</p></a>
-                                    <a href="songs/1871/freiweg.html?dc=en"><p>Frei Weg, Carl Latann (1888)</p></a>
-                                    <a href="songs/1871/altekameraden.html?dc=en"><p>Alte Kameraden, Carl Teike (1889)</p></a>
-                                    <a href="songs/1871/beimuellershatgebrannt.html?dc=en"><p>Bei Müllers hats gebrannt (~1900)</p></a>
-                                    <a href="songs/1871/drobenimoberland.html?dc=en"><p>Droben im Oberland (1900)</p></a>
-                                    <a href="songs/1871/bubundspinnegingenindenwald.html?dc=en"><p>Bub und Spinne gingen in den Wald (1908)</p></a>
-                                    <a href="songs/1871/einschoenertagzuendegeht.html?dc=en"><p>Ein schöner Tag zu Ende geht (1910)</p></a>
-                                    <a href="songs/1871/wennderhundmitderwurst.html?dc=en"><p>Wenn der Hund mit der Wurst über´n Spucknapf springt (1911)</p></a>
-                                    <a href="songs/1871/habsonneimherzenobsstuermt.html?dc=en"><p>Hab Sonne im Herzen ob´s stürmt, Michael Englert (1913)</p></a>
-                                    <a href="songs/1871/argonnerwaldummitternacht.html?dc=en"><p>Argonnerwald um Mitternacht (~1914)</p></a>
-                                    <a href="songs/1871/dieblauendragoner.html?dc=en"><p>Die blauen Dragoner, G.W. Harmssen (1914)</p></a>
-                                    <a href="songs/1871/einemugeinemaeh.html?dc=en"><p>Eine Muh eine Mäh, Wilhelm Lindemann (1914)</p></a>
-                                    <a href="songs/1871/reservistensindwirnun.html?dc=en"><p>Reservisten sind wir nun (1914)</p></a>
-                                    <a href="songs/1871/gaebesnureinekrone.html?dc=en"><p>Gäb es nur eine Krone (1915)</p></a>
-                                    <a href="songs/1871/imgruenenwalddawodiedrosselsingt.html?dc=en"><p>Im grünen Wald da wo die Drossel singt, Friederike Kempner (1915)</p></a>
-                                    <a href="songs/1871/wildgaenserauschendurchdienacht.html?dc=en"><p>Wildgänse rauschen durch die Nacht, Walter Flex (1915)</p></a>
-                                    <a href="songs/1871/woallestrassenenden.html?dc=en"><p>Wo alle Straßen enden (~1915)</p></a>
-                                    <a href="songs/1871/hinausindiefernemitbutterbrotundspeck.html?dc=en"><p>Hinaus in die Ferne mit Butterbrot und Speck (1916)</p></a>
-                                    <a href="songs/1871/weitistderwegzurueckinsheimatland.html?dc=en"><p>Weit ist der Weg zurück ins Heimatland (1917)</p></a>
-                                    <a href="songs/1871/ichbineindeutscherkenntihrmeinefarben.html?dc=en"><p>Ich bin ein Deutscher kennt ihr meine Farben</p></a>
+                                    <?php                           
+                                        $sql = "SELECT * FROM song_1871";
+                                        $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
+
+                                        if(mysqli_num_rows($result) > 0) {
+                                            while($row = mysqli_fetch_array($result)) {
+                                                echo "<a href='song.php?a=song_1871&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                            }
+                                        }
+                                        else {
+                                            echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -299,24 +283,19 @@
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#song-list">
                                 <div class="accordion-body">
-                                    <a href="songs/1918/aufgesellenfrohundmunter.html?dc=en"><p>Auf Gesellen froh und munter (1918)</p></a>
-                                    <a href="songs/1918/wenndiearbeitszeitzuende.html?dc=en"><p>Wenn die Arbeitszeit zu Ende, Jürgen Brand (1919)</p></a>
-                                    <a href="songs/1918/trumtrumterumtumtum.html?dc=en"><p>Trum, trum, terum tum tum, Walter Gättke (1919)</p></a>
-                                    <a href="songs/1918/aufspielerdieihrvereint.html?dc=en"><p>Auf Spieler die ihr hier vereint (~1920)</p></a>
-                                    <a href="songs/1918/aufweitergruenerheide.html?dc=en"><p>Auf weiter grüner Heide (~1920)</p></a>
-                                    <a href="songs/1918/dasistdasliedvomtaeglichenbrot.html?dc=en"><p>Das ist das Lied vom täglichen Brot, Jörg Mager (1920)</p></a>
-                                    <a href="songs/1918/diegrenzwachthieltimosten.html?dc=en"><p>Die Grenzwacht hielt im Osten, Manteuffel-Katzdangen (1920)</p></a>
-                                    <a href="songs/1918/esklappertderhufamstege.html?dc=en"><p>Es klappert der Huf am Stege, Hans Riedel (1920)</p></a>
-                                    <a href="songs/1918/derwinterderismirnetzwieder.html?dc=en"><p>Der Winter der is mir net z´wieder , Otto Sirl (~1921)</p></a>
-                                    <a href="songs/1918/ihrkoenntedaswortverbieten.html?dc=en"><p>Ihr könnt das Wort verbieten, Henry Mackay (1921)</p></a>
-                                    <a href="songs/1918/wirziehenueberdiestrassen.html?dc=en"><p>Wir ziehen über die Straßen, Knott (1921)</p></a>
-                                    <a href="songs/1918/hohetannenweisendiesterne.html?dc=en"><p>Hohe Tannen weisen die Sterne (1923)</p></a>
-                                    <a href="songs/1918/nichtskannunsrauben.html?dc=en"><p>Nichts kann uns rauben, Karl Bröger (1923)</p></a>
-                                    <a href="songs/1918/alletagistkeinsonntag.html?dc=en"><p>Alle Tag ist kein Sonntag (1924)</p></a>
-                                    <a href="songs/1918/wirhabenhungerhungerhunger.html?dc=en"><p>Wir haben Hunger Hunger Hunger (1925)</p></a>
-                                    <a href="songs/1918/imwaldimgruenenwalde.html?dc=en"><p>Im Wald im grünen Walde (1927)</p></a>
-                                    <a href="songs/1918/dasistnungarverschollen.html?dc=en"><p>Das ist nun gar verschollen (1930)</p></a>
-                                    <a href="songs/1918/hungerhungermarmeladekarbonade.html?dc=en"><p>Hunger Hunger Marmelade Karbonade (1930)</p></a>
+                                    <?php                           
+                                        $sql = "SELECT * FROM song_1918";
+                                        $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
+
+                                        if(mysqli_num_rows($result) > 0) {
+                                            while($row = mysqli_fetch_array($result)) {
+                                                echo "<a href='song.php?a=song_1918&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                            }
+                                        }
+                                        else {
+                                            echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         </div>
