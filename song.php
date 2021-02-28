@@ -49,7 +49,7 @@ be used to populate the page dynamically. -->
     <!-- Scripts -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="lang.js"></script>
+    
 
     <title><?php echo $row['title']; ?></title>
     <meta name="description" content="<?php echo $row['display']; ?>">
@@ -62,7 +62,7 @@ be used to populate the page dynamically. -->
         <div class="row heading">
             <div class="col-6 col-head">
                 <p class="header-name">
-                    <a class="dynamic-content" href="index.php?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
+                    <a class="dynamic-content changing" href="index.php?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
                 </p>
             </div>
             <div class="col-6 lang col-head">
@@ -86,13 +86,13 @@ be used to populate the page dynamically. -->
                     </div>
                     <ul>
                         <li>
-                            <a href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=en" class="-en">English</a>
+                            <a class="-en">English</a>
                         </li>
                         <li>
-                            <a href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=fr" class="-fr">Français</a>
+                            <a class="-fr">Français</a>
                         </li>
                         <li>
-                            <a href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=de" class="-de">Deutsch</a>
+                            <a class="-de">Deutsch</a>
                         </li>
                     </ul>
                 </div>
@@ -104,9 +104,10 @@ be used to populate the page dynamically. -->
                         <div class="fr dynamic-content select"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</div>
                         <div class="de dynamic-content select"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</div>
                     </a>
+                    
                   
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=en"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item" ><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
                       <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
                       <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
                     </div>
@@ -122,12 +123,6 @@ be used to populate the page dynamically. -->
 
             <div class="main song">
                 <hr>
-                <div class="dynamic-content site-wide">
-                    <div class="intro adjust">
-                        <p class="disclaimer" id="site-wide-message"></p>
-                    </div>
-                    <hr>
-                </div>
 
                 <!-- Song title and lyrics retrieved from database -->
                 <h3 class="subtitle-name"><?php echo $row['title']; ?></h3> 
@@ -178,6 +173,8 @@ be used to populate the page dynamically. -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="lang.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-.site-wide {
+.en, .fr, .de {
     display: none;
 }
 
@@ -129,8 +129,9 @@ header {
 }
 
 .lang-menu ul li a:hover {
-    background-color: #f2f2f2;
+    
     text-decoration: underline;
+    border: 2px solid #113e64;
 }
 
 .-de:before {
@@ -147,6 +148,10 @@ header {
 
 .lang-menu:hover ul {
     display: block;
+}
+
+.lang-menu ul li a:active {
+    background-color: #e0e0e0;
 }
 
 /* Dropdown Lang Select Styling */

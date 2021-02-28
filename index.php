@@ -30,7 +30,8 @@
     <!-- Scripts -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="lang.js"></script>
+    
+    
     
     <title>Volkslieder</title>
     <meta name="description" content="Historic German Songs">
@@ -43,7 +44,7 @@
         <div class="row heading">
             <div class="col-6 col-head">
                 <p class="header-name">
-                    <a class="dynamic-content" href="index.php?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
+                    <a class="dynamic-content changing" href="index.php?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
                 </p>
             </div>
             <div class="col-6 lang col-head">
@@ -67,29 +68,29 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="index.php?dc=en" class="-en">English</a>
+                            <a class="-en">English</a>
                         </li>
                         <li>
-                            <a href="index.php?dc=fr" class="-fr">Français</a>
+                            <a class="-fr">Français</a>
                         </li>
                         <li>
-                            <a href="index.php?dc=de" class="-de">Deutsch</a>
+                            <a class="-de">Deutsch</a>
                         </li>
                     </ul>
                 </div>
                 
                 <!-- Language menu on mobile view -->
                 <div class="dropdown show">
-                    <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="btn btn-secondary" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="en dynamic-content select"><img src="https://www.countryflags.io/gb/flat/32.png"> English</div>
                         <div class="fr dynamic-content select"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</div>
                         <div class="de dynamic-content select"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</div>
                     </a>
-                  
+                    
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" href="index.php?dc=en"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
-                      <a class="dropdown-item" href="index.php?dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
-                      <a class="dropdown-item" href="index.php?dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
+                      <a class="dropdown-item"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
+                      <a class="dropdown-item"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
                     </div>
                 </div>
 
@@ -181,7 +182,7 @@
 
                                     if(mysqli_num_rows($result) > 0) {
                                         while($row = mysqli_fetch_array($result)) {
-                                            echo "<a href='song.php?a=song_1200&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                            echo "<a class=\"changing\" href='song.php?a=song_1200&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
                                         }
                                     }
                                     else {
@@ -208,7 +209,7 @@
 
                                     if(mysqli_num_rows($result) > 0) {
                                         while($row = mysqli_fetch_array($result)) {
-                                            echo "<a href='song.php?a=song_1600&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                            echo "<a class=\"changing\" href='song.php?a=song_1600&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
                                         }
                                     }
                                     else {
@@ -235,7 +236,7 @@
 
                                     if(mysqli_num_rows($result) > 0) {
                                         while($row = mysqli_fetch_array($result)) {
-                                            echo "<a href='song.php?a=song_1815&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                            echo "<a class=\"changing\" href='song.php?a=song_1815&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
                                         }
                                     }
                                     else {
@@ -262,7 +263,7 @@
 
                                         if(mysqli_num_rows($result) > 0) {
                                             while($row = mysqli_fetch_array($result)) {
-                                                echo "<a href='song.php?a=song_1871&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                                echo "<a class=\"changing\" href='song.php?a=song_1871&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
                                             }
                                         }
                                         else {
@@ -289,7 +290,7 @@
 
                                         if(mysqli_num_rows($result) > 0) {
                                             while($row = mysqli_fetch_array($result)) {
-                                                echo "<a href='song.php?a=song_1918&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                                echo "<a class=\"changing\" href='song.php?a=song_1918&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
                                             }
                                         }
                                         else {
@@ -331,5 +332,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
+    <script src="lang.js"></script>
+
   </body>
 </html>
