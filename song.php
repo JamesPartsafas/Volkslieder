@@ -107,9 +107,9 @@ be used to populate the page dynamically. -->
                     
                   
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                      <a class="dropdown-item" ><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
-                      <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=fr"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
-                      <a class="dropdown-item" href="song.php?a=<?php echo $a."&q=".$q; ?>&dc=de"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
+                      <a class="dropdown-item"><img src="https://www.countryflags.io/gb/flat/32.png"> English</a>
+                      <a class="dropdown-item"><img src="https://www.countryflags.io/fr/flat/32.png"> Français</a>
+                      <a class="dropdown-item"><img src="https://www.countryflags.io/de/flat/32.png"> Deutsch</a>
                     </div>
                 </div>
 
@@ -161,6 +161,40 @@ be used to populate the page dynamically. -->
                 </div>
 
                 <hr>
+
+                <div class="share songs adjust" id="period-list">
+                    <div class="en dynamic-content">
+                        <h3 class="dynamic-content subtitle">All songs from this period</h3>
+                    </div>
+                    <div class="fr dynamic-content">
+                        <h3 class="dynamic-content subtitle">Toutes les chansons de cette période</h3>
+                    </div>
+                    <div class="de dynamic-content">
+                        <h3 class="dynamic-content subtitle">Alle Lieder aus dieser Zeit</h3>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="intro adjust">
+                    <div class="accordion-body">
+                        <?php
+                            $period = $_GET['a'];             
+                            $sql = "SELECT * FROM $period";
+                            $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
+
+                            if(mysqli_num_rows($result) > 0) {
+                                while($row = mysqli_fetch_array($result)) {
+                                    echo "<a class=\"changing\" href='song.php?a={$period}&q={$row['link']}&dc={$_GET['dc']}'><p>{$row['display']}</p></a>";
+                                }
+                            }
+                            else {
+                                echo "<p>No songs to display. Our servers may be experiencing issues. Check back later.</p>";
+                            }
+                        ?>
+                    </div>
+                </div>
+                <hr>
+
             </div>
             </div>
         <footer>

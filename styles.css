@@ -493,6 +493,10 @@ footer {
     margin-top: 50px;
 }
 
+#period-list {
+    margin-top: 40px;
+}
+
 @media (max-width: 1550px) {
 
     .main {
@@ -591,7 +595,7 @@ footer {
 
 @media print {
     
-    header, .share, .icon-bar, hr, .post-song, footer, .disclaimer, .site-wide {
+    header, .share, .icon-bar, hr, .post-song, footer, .disclaimer, .site-wide, .intro {
         display: none;
         border: 0;
     }
