@@ -4,10 +4,12 @@ character encoding to UTF-8 -->
 
 <?php
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "songs";
+//include_once '../config.php';
+
+$dbServername = DB_SERVERNAME;
+$dbUsername = DB_USERNAME;
+$dbPassword = DB_PASSWORD;
+$dbName = DB_NAME;
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName) or die("Connection to server failed. Try again later.");
 $conn->set_charset("utf8");

@@ -1,0 +1,617 @@
+.en, .fr, .de {
+    display: none;
+}
+
+.default-message {
+    position: relative;
+    bottom: 7px;
+}
+
+a {
+    text-decoration: none;
+    color: #557A95;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #272727;
+}
+
+/* Header Styling */
+header {
+    position: sticky;
+    background-color: #113e64;
+    box-shadow: 0 0 15px 0 grey;
+}
+
+.heading {
+    width: 95%;
+    margin: auto;
+}
+
+.header-name {
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: 900;
+    font-style: italic;
+    margin: 5px;
+    padding: 0px;
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+/* Lang Select Styling */
+.lang-menu {
+    width: 126px;
+    margin-top: 12px;
+    position: relative;
+    float: right;
+}
+
+.selected-lang {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    width: 125px;
+    padding-left: 10px;
+    color: #181818;
+    font-weight: 600;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+
+.selected-lang.english {
+    padding-right: 21px;
+}
+
+.selected-lang.english:before {
+    background-image: url(https://flagcdn.com/32x24/gb.png);
+}
+
+.selected-lang.french {
+    padding-right: 12px;
+}
+
+.selected-lang.french:before {
+    background-image: url(https://flagcdn.com/32x24/fr.png);
+}
+
+.selected-lang.german {
+    padding-right: 13px;
+}
+
+.selected-lang.german:before {
+    background-image: url(https://flagcdn.com/32x24/de.png);
+}
+
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 24px;
+    margin-top: 4px;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 1px 10px black;
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.lang-menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    width: 125px;
+    display: block;
+    padding: 5px 10px;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 24px;
+    margin-top: 4px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.lang-menu ul li a:hover {
+    
+    text-decoration: underline;
+    border: 2px solid #113e64;
+}
+
+.-de:before {
+    background-image: url(https://flagcdn.com/w40/de.jpg);
+}
+
+.-en:before {
+    background-image: url(https://flagcdn.com/32x24/gb.png);
+}
+
+.-fr:before {
+    background-image: url(https://flagcdn.com/32x24/fr.png);
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
+
+.lang-menu ul li a:active {
+    background-color: #e0e0e0;
+}
+
+/* Dropdown Lang Select Styling */
+.dropdown {
+    display: none;
+}
+
+.btn-secondary {
+    background-color: white !important;
+    color: #181818 !important;
+    font-weight: 600;
+}
+
+.glyphicon {
+    display: none !important;
+}
+
+.dropdown img {
+    border: 0;
+    position: relative;
+    top: 3px;
+}
+
+/* Central Content Styling */
+.main {
+    margin: 0 auto 70px;
+    width: 60%;
+    background-color: #f9f9f9;
+    position: relative;
+    min-height: 100vh;
+    border: solid #cccdd3;
+    border-width: 1px;
+    padding-bottom: 80px;
+}
+
+/* Photo Styling */
+.photo {
+    width: 70%;
+    margin: 0px auto 30px;
+    text-align: center;
+    color: #6b6b6b
+}
+
+.photo.photo-bottom {
+    margin: 45px auto 30px;
+}
+
+img {
+    max-width: 100%;
+    border: 1px solid #113e64;
+    margin-bottom: 10px;
+}
+
+
+.intro {
+    text-align: justify;
+    width: 70%;
+    margin: auto;
+    background-color: #f1eee4;
+    padding: 30px 0 20px;
+}
+
+.disclaimer {
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 0 30px;
+    width: 100%;
+}
+
+hr {
+    width: 75%;
+    margin: auto;
+    border: 1px solid #113e64;
+    opacity: 1;
+}
+
+.top-hr {
+    margin-top:40px;
+    margin-bottom:-28px;
+}
+
+.subtitle-heading {
+    margin: 10px 0 30px 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.subtitle-title {
+    font-style: italic;
+    font-size: 37px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    text-decoration: underline;
+    margin: 55px auto 10px;
+}
+
+.subtitle {
+    margin: 35px 0 0 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+}
+
+/* Accordion and Main Content Styling */
+.content {
+    margin: 5px auto 30px;
+    width: 70%;
+}
+
+.accordion-button, .show, .collapsing, .accordion-item:last-of-type .accordion-collapse, .accordion {
+    border-width: 0px !important;
+}
+
+.accordion-button {
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #f9f9f9 !important;
+}
+
+.accordion-button:hover {
+    color: #14599d;
+    text-decoration: underline;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0;
+    color: #14599d;
+}
+
+.accordion-body {
+    padding: 20px 30px 10px 30px;
+    background-color: #f1eee4;
+}
+
+.accordion-body a {
+    color: #272727;
+}
+
+.accordion-body a:hover {
+    color: #14599d;
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 0px;
+    height: 36px;
+    width: 100%;
+    border-style: solid;
+    border-color: #cccdd3;
+    border-width: 1px 0px 0px 0px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8d8e91;
+    font-size: 14px;
+    padding: 7px 0px 5px 20px;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+  
+.content-wrapper {
+    padding-bottom: 36px;
+}
+  
+/* Sidebar Styling */
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    color: white;
+    font-size: 23px;
+}
+
+.icon-bar a:hover {
+    background-color: #113e64;
+}
+  
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+  
+.pinterest {
+    background: #E60023;
+    color: white;
+}
+  
+.tumblr {
+    background: #34526f ;
+    color: white;
+}
+  
+.email {
+    background: #641126;
+    color: white;
+}
+
+/* Footer Share Styling */
+
+.share {
+    width: 70%;
+    margin: auto;
+}
+
+.share.songs {
+    margin-bottom: 50px;
+}
+
+.icon-bar-foot {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.icon-bar-foot a {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 23px;
+}
+
+.icon-bar-foot i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.icon-bar-foot a:hover {
+    background-color: #113e64;
+}
+
+/* Songs Pages Styling */
+
+.header-name a{
+    color: white;
+    padding: 5px;
+}
+
+.header-name a:hover {
+    background-color: white;
+    color: #113e64;
+    border-radius: 2px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+
+.main.song {
+    padding-top: 40px;
+}
+
+.subtitle-name{
+    margin: 25px 0 18px 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.content.poem {
+    text-align: center;
+}
+
+.content.poem p {
+    margin-top: 18px;
+}
+
+.row.post-song {
+    width: 70%;
+    margin: 35px auto -20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+}
+
+.btn-light {
+    background-color: white;
+    width: 140px;
+    height: 50px;
+    border: 2px solid #272727;
+    color: #272727;
+    margin-bottom: 10px;
+}
+
+.btn-light:hover {
+    background-color: #113e64;
+    color: white;
+    border: 2px solid #272727;
+}
+
+.btn-light:focus {
+    background-color: white;
+    color: #272727;
+    border: 2px solid #272727;
+}
+
+.btn-light a {
+    color: #272727;
+}
+
+.btn-light a:hover {
+    background-color: #113e64;
+    color: white;
+}
+
+.end {
+    margin-top: 50px;
+}
+
+#period-list {
+    margin-top: 40px;
+}
+
+@media (max-width: 1550px) {
+
+    .main {
+        width: 70%;
+    }
+
+    .adjust {
+        width: 75%;
+    }
+
+    hr {
+        width: 80%;
+    }
+    
+}
+
+@media (max-width: 1350px) {
+
+    .main {
+        width: 80%;
+    }
+
+    .adjust {
+        width: 80%;
+    }
+
+    hr {
+        width: 85%;
+    }
+    
+}
+
+@media (max-width: 1150px) {
+
+    .main {
+        width: 85%;
+    }
+
+    .photo {
+        width: 550px;
+    }
+
+    .adjust {
+        width: 85%;
+    }
+
+    hr {
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 950px) {
+    
+    .main {
+        width: 100%;
+    }
+
+    .icon-bar {
+        display: none;
+    }
+
+    .adjust {
+        width: 90%;
+    }
+
+    hr {
+        width: 95%;
+    }
+
+    .lang-menu {
+        display: none;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    .col-6.lang {
+        text-align: right;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .heading {
+        width: 100%;
+    }
+
+    .adjust {
+        width: 93%;
+    }
+
+}
+
+@media print {
+    
+    header, .share, .icon-bar, hr, .post-song, footer, .disclaimer, .site-wide, .intro {
+        display: none;
+        border: 0;
+    }
+
+    .main {
+        border: 0;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+}
