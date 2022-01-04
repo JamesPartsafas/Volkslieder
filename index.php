@@ -11,7 +11,7 @@
 <html lang="<?php echo $_GET['dc']; ?>">
   <?php
     include_once 'template/head.php';
-    renderHead("Volkslider", "Historic German Songs")
+    renderHead("Volkslieder", "Historic German Songs");
   ?>  
 
   <body>

@@ -24,4 +24,4 @@
     <title><?php echo $title; ?></title>
     <meta name="description" content="<?php echo $description; ?>">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
-</head
+</head>
