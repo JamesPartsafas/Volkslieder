@@ -68,7 +68,7 @@ header {
 }
 
 .selected-lang.english:before {
-    background-image: url(https://www.countryflags.io/gb/flat/32.png);
+    background-image: url(https://flagcdn.com/32x24/gb.png);
 }
 
 .selected-lang.french {
@@ -76,7 +76,7 @@ header {
 }
 
 .selected-lang.french:before {
-    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+    background-image: url(https://flagcdn.com/32x24/fr.png);
 }
 
 .selected-lang.german {
@@ -84,14 +84,15 @@ header {
 }
 
 .selected-lang.german:before {
-    background-image: url(https://www.countryflags.io/de/flat/32.png);
+    background-image: url(https://flagcdn.com/32x24/de.png);
 }
 
 .selected-lang:before {
     content: '';
     display: block;
     width: 32px;
-    height: 32px;
+    height: 24px;
+    margin-top: 4px;
 }
 
 .lang-menu ul {
@@ -123,7 +124,8 @@ header {
     content: '';
     display: inline-block;
     width: 32px;
-    height: 32px;
+    height: 24px;
+    margin-top: 4px;
     margin-right: 6px;
     vertical-align: middle;
 }
@@ -135,15 +137,15 @@ header {
 }
 
 .-de:before {
-    background-image: url(https://www.countryflags.io/de/flat/32.png);
+    background-image: url(https://flagcdn.com/w40/de.jpg);
 }
 
 .-en:before {
-    background-image: url(https://www.countryflags.io/gb/flat/32.png);
+    background-image: url(https://flagcdn.com/32x24/gb.png);
 }
 
 .-fr:before {
-    background-image: url(https://www.countryflags.io/fr/flat/32.png);
+    background-image: url(https://flagcdn.com/32x24/fr.png);
 }
 
 .lang-menu:hover ul {

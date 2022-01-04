@@ -1,7 +1,3 @@
-<!-- Connect to database and navigate to correct MySQL table 
-using the value of "a" in the URL and then navigates to the row of the 
-MySQL table using the value of "q" in the URL. This will
-be used to populate the page dynamically. -->
 <?php
     if(isset($_GET['a']) && isset($_GET['q'])){
         include_once 'includes/dbh.inc.php';
@@ -141,7 +137,7 @@ be used to populate the page dynamically. -->
             </div>
             </div>
         <footer>
-            © James Partsafas 2021
+            © James Partsafas <?php echo date('Y'); ?>
         </footer>
     </div>
 

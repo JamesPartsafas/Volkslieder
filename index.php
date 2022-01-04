@@ -266,7 +266,7 @@
         </div>
 
         <footer>
-            © James Partsafas 2021
+            © James Partsafas <?php echo date('Y'); ?>
         </footer>
     </div>
 
