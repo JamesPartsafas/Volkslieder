@@ -4,6 +4,7 @@
     }
 
     include_once 'includes/dbh.inc.php';
+    include_once 'includes/logging.php';
 ?>
 
 <!doctype html>

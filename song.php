@@ -1,4 +1,6 @@
 <?php
+    include_once 'includes/logging.php';
+    
     if(isset($_GET['a']) && isset($_GET['q'])){
         include_once 'includes/dbh.inc.php';
         $a = mysqli_real_escape_string($conn, $_GET['a']);
