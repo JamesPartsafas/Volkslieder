@@ -1,14 +1,21 @@
 <?php
     include_once 'includes/logging.php';
+    include_once 'includes/whitelist.php';
     
     if(isset($_GET['a']) && isset($_GET['q'])){
         include_once 'includes/dbh.inc.php';
         $a = mysqli_real_escape_string($conn, $_GET['a']);
         $q = mysqli_real_escape_string($conn, $_GET['q']);
 
-        $sql = "SELECT * FROM $a WHERE link='$q'";
-        $result = mysqli_query($conn, $sql) or die(header('Location: index.php?dc=de')); //Redirect on broken "a" tags to German homepage
-        $row = mysqli_fetch_array($result);
+        if(!in_array($a, $whitelist)) {
+            die(header('Location: index.php?dc=de'));
+        }
+
+        $stmt = $conn->prepare("SELECT * FROM $a WHERE link=?");
+        $stmt->bind_param("s", $q);
+        $stmt->execute() or die(header('Location: index.php?dc=de'));
+        $result = $stmt->get_result() or die(header('Location: index.php?dc=de'));
+        $row = $result->fetch_assoc();
         
         if(!mysqli_num_rows ( $result )) {
             (header('Location: index.php?dc=de')); //Redirect on broken "q" tags to German homepage
