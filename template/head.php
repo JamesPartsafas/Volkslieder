@@ -1,4 +1,3 @@
-<?php //include_once '../config.php'; ?>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">

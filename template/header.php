@@ -2,7 +2,7 @@
     <div class="row heading">
         <div class="col-6 col-head">
             <p class="header-name">
-                <a class="dynamic-content changing" href="index.php?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
+                <a class="dynamic-content changing" href="home?dc=<?php echo $_GET['dc']; ?>">Volkslieder</a>
             </p>
         </div>
         <div class="col-6 lang col-head">

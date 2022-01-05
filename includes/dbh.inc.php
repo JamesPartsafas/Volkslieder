@@ -4,8 +4,6 @@ character encoding to UTF-8 -->
 
 <?php
 
-//include_once '../config.php';
-
 $dbServername = DB_SERVERNAME;
 $dbUsername = DB_USERNAME;
 $dbPassword = DB_PASSWORD;

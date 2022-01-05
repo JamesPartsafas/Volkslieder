@@ -1,7 +1,7 @@
 <div class=<?php echo "{$lang} dynamic-content" ?>>
     <div class="row post-song adjust">
         <div class="col-sm-6">
-            <a href=<?php echo "index.php?dc={$lang}" ?>>
+            <a href=<?php echo "home?dc={$lang}" ?>>
                 <button type="button" class="btn btn-light"><?php echo $return ?></button>
             </a>
         </div>

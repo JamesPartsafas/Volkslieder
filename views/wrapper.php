@@ -19,11 +19,7 @@
 
             <?php echo file_get_contents(ROOT_DIR . "template/static/share-sidebar.html") ?>
             
-            <div class="main">
-
-                <?php echo $innerContent; ?>
-
-            </div>
+            <?php echo $innerContent; ?>
 
         </div>
 

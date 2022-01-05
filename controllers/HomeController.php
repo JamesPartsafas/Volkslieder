@@ -1,15 +1,16 @@
 <?php
 
 include_once ROOT_DIR . 'includes/view.php';
+include_once ROOT_DIR . 'template/variableTemplate.php';
 include_once 'Controller.php';
 
 class HomeController extends Controller {
 
-    function __construct($conn) {
+    public function __construct($conn) {
         parent::__construct($conn);
     }
 
-    function index() {
+    public function index() {
         if (!in_array($_GET['dc'], $this->langCodes)) {
             $this->handleException();
         }

@@ -1,6 +1,9 @@
 <?php
+
+$buttonsFile = ROOT_DIR . 'template/buttons/returnButtons.php';
+
 includeWithVariables(
-    ROOT_DIR . 'template/buttons/returnButtons.php', 
+    $buttonsFile, 
     array(
         "lang" => "en", 
         "return" => "Return",
@@ -9,7 +12,7 @@ includeWithVariables(
 );
 
 includeWithVariables(
-    ROOT_DIR . 'template/buttons/returnButtons.php', 
+    $buttonsFile, 
     array(
         "lang" => "fr", 
         "return" => "Retourner",
@@ -18,7 +21,7 @@ includeWithVariables(
 );
 
 includeWithVariables(
-    ROOT_DIR . 'template/buttons/returnButtons.php', 
+    $buttonsFile, 
     array(
         "lang" => "de", 
         "return" => "Zurück",
